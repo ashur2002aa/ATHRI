@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assyrian/Chaldean New Year Countdown</title>
+  <style>
+    /* Basic reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-color: #f4f4f9;
+      padding: 10px; /* Adjusted for smaller screens */
+    }
+
+    /* Header styling */
+    .header {
+      background-color: #d3d3d3; /* Light gray background */
+      width: 100%;
+      text-align: center;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+
+    /* Clock styling */
+    .clock {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 5px; /* Adjusted margin */
+    }
+
+    /* Clock label styling */
+    .clock-label {
+      font-size: 20px; /* Adjusted font size */
+      color: #333;
+    }
+
+    /* Scrollable container for main buttons */
+    .scroll-bar {
+      display: flex;
+      overflow-x: auto;
+      width: 100%;
+      max-width: 90vw; /* Adjusted for responsiveness */
+      background-color: #ddd;
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+
+    .scroll-bar button {
+      min-width: 100px; /* Adjusted for smaller screens */
+      margin-right: 10px;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      flex-shrink: 0; /* Prevent buttons from shrinking */
+    }
+
+    .scroll-bar button:hover {
+      background-color: #555;
+    }
+
+    /* Search box styling */
+    .search-container {
+      margin-bottom: 20px;
+      text-align: center; /* Center the search box */
+    }
+
+    .search-container input {
+      padding: 10px;
+      width: 100%;
+      max-width: 300px; /* Maximum width for the search box */
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    /* Section content styling */
+    .section-content {
+      display: none;
+      width: 100%;
+      max-width: 90vw; /* Adjusted for responsiveness */
+      padding: 15px;
+      background-color: #e0e0e0;
+      border-radius: 8px;
+      margin-top: 10px;
+      text-align: center; /* Center text */
+    }
+
+    /* Item styling */
+    .item {
+      border: 1px solid #ccc;
+      padding: 15px; /* Increased padding for better touch targets */
+      margin: 10px 0;
+      border-radius: 5px;
+      background-color: #fff;
+      text-decoration: none; /* Remove underline from links */
+      color: #333; /* Default text color */
+      transition: background-color 0.3s;
+      display: flex; /* Make items flex containers */
+      flex-direction: column; /* Align items vertically */
+      align-items: center; /* Center align items */
+    }
+
+    .item img {
+      width: 150px; /* Fixed width */
+      height: 150px; /* Fixed height */
+      object-fit: cover; /* Maintain aspect ratio and cover the area */
+      border-radius: 5px;
+      margin-bottom: 5px;
+    }
+
+    .item:hover {
+      background-color: #f0f0f0; /* Highlight item on hover */
+    }
+
+    .item-name {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 5px;
+      text-align: center; /* Center align text */
+    }
+
+    @media (max-width: 600px) {
+      .clock {
+        font-size: 20px; /* Smaller font size for small screens */
+      }
+      .scroll-bar button {
+        min-width: 80px; /* Further reduce min width on small screens */
+      }
+      .item-name {
+        font-size: 16px; /* Adjust font size for item names */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>ATHRI</h1>
+  </div>
+
+  <div class="clock-label">NUHADRA</div>
+  <div class="clock" id="duhokClock">Loading time...</div>
+
+  <div class="scroll-bar">
+    <button onclick="openSection('section1')">Villages & Historical Sites</button>
+    <button onclick="openSection('section2')">Sweets and Refreshments</button>
+    <button onclick="openSection('section3')">SOON</button>
+    <button onclick="openSection('section4')">COMING SOON</button>
+    <button onclick="openSection('section5')">COMING SOON</button>
+    <button onclick="openSection('section6')">COMING SOON</button>
+  </div>
+
+  <div class="search-container">
+    <input type="text" id="searchBox" placeholder="Search for items..." onkeyup="filterItems()">
+  </div>
+
+  <div id="section1" class="section-content" style="display: block;"> <!-- Set display to block -->
+    <h2>Villages and Historical Sites</h2>
+    <a href="https://www.google.com/maps/dir/36.8568476,42.9704157/Nahla/@36.7474211,43.1183527,10z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x40061b32f9181f0b:0x167a4f32eaeb5aa2!2m2!1d43.7049203!2d36.8684489?entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D" class="item">
+      <img src="464f6dbece9b5606688187a9dea7f42f.jpg" alt="Nahla">
+      <div class="item-name">NALA</div>
+    </a>
+    <!-- Add more items as needed -->
+  </div>
+
+  <div id="section2" class="section-content">
+    <h2>Sweets and Refreshments</h2>
+    <a href="" class="item">
+      <img src="images (1).jfif" alt="GASHTYAR">
+      <div class="item-name">HAPPY DAY SWEETS</div>
+    </a>
+    <a href="https://www.google.com/maps/place/Roben+Kunafa/@36.8673206,42.9731874,17z/data=!3m1!4b1!4m6!3m5!1s0x40088d0051df56f3:0x39be496965d0d833!8m2!3d36.8673206!4d42.9757623!16s%2Fg%2F11ldd2w8vl?entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D" class="item">
+      <img src="images.jfif" alt="ROBEN">
+      <div class="item-name">ROBEN KUNAFA</div>
+    </a>
+    <a href="https://www.google.com/maps/dir/36.8655577,42.9880132/VX4G%2BVPX+Gashetiyar-%D8%A7%D9%84%D8%B3%D8%A7%D8%A6%D8%AD%D8%A9%D8%AF%D9%87%D9%88%D9%83,+Unnamed+Road,+Duhok,+Duhok+Governorate%E2%80%AD/@36.8623116,42.976457,16z/data=!3m1!4b1!4m10!4m9!1m1!4e1!1m5!1m1!1s0x40088d071b030ed7:0x42168b71f3c569f5!2m2!1d42.9880132!2d36.8655577?entry=ttu&g_ep=EgoyMDI0MTAyOS4wIKXMDSoASAFQAw%3D%3D" class="item">
+      <img src="images (2).jfif" alt="GASHTYAR">
+      <div class="item-name">GASHTYAR</div>
+    </a>
+  </div>
+
+  <div id="section3" class="section-content">
+    <h2>SOON</h2>
+   
+  </div>
+
+  <div id="section4" class="section-content">
+    <h2>COMING SOON</h2>
+  </div>
+
+  <div id="section5" class="section-content">
+    <h2>COMING SOON</h2>
+  </div>
+
+  <div id="section6" class="section-content">
+    <h2>COMING SOON</h2>
+  </div>
+
+  <script>
+    function openSection(sectionId) {
+      // Hide all sections
+      const sections = document.querySelectorAll('.section-content');
+      sections.forEach(section => {
+        section.style.display = 'none';
+      });
+
+      // Show the selected section
+      const selectedSection = document.getElementById(sectionId);
+      if (selectedSection) {
+        selectedSection.style.display = 'block';
+      }
+    }
+
+    // Add event listener to run on DOMContentLoaded
+    document.addEventListener('DOMContentLoaded', () => {
+      // Open the Villages & Historical Sites section by default
+      openSection('section1');
+    });
+    
+    function updateClock() {
+      const now = new Date();
+      const countdownDate = new Date(2025, 0, 1); // January 1, 2025
+      const timeRemaining = countdownDate - now;
+
+      const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+
+      document.getElementById("duhokClock").innerHTML = days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+    }
+
+    setInterval(updateClock, 1000);
+  </script>
+</body>
+</html>
